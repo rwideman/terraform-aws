@@ -15,23 +15,23 @@ data "aws_ami" "debian12" {
   }
 }
 
-data "aws_ami" "ubuntu_lts" {
-  most_recent = true
-  owners      = ["099720109477"] # Canonical's official AWS account ID
-  filter {
-    name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-*-*-amd64-server-*"]
-  }
-  filter {
-    name   = "architecture"
-    values = ["x86_64"]
-  }
-  filter {
-    name   = "root-device-type"
-    values = ["ebs"]
-  }
-  filter {
-    name   = "virtualization-type"
-    values = ["hvm"]
-  }
-}
+# data "aws_ami" "ubuntu_lts" {
+#   most_recent = true
+#   owners      = ["099720109477"] # Canonical's official AWS account ID
+#   filter {
+#     name   = "name"
+#     values = ["ubuntu/images/hvm-ssd/ubuntu-*-*-amd64-server-*"]
+#   }
+#   filter {
+#     name   = "architecture"
+#     values = ["x86_64"]
+#   }
+#   filter {
+#     name   = "root-device-type"
+#     values = ["ebs"]
+#   }
+#   filter {
+#     name   = "virtualization-type"
+#     values = ["hvm"]
+#   }
+# }
